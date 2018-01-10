@@ -1,13 +1,14 @@
 #include "libbmp.h"
 #include "stdio.h"
 #include "math.h"
+#include "light.h"
 
 void sample();
 void geo();
 
 int main()
 {
-    geo();
+    light2d();
     return 0;
 }
 

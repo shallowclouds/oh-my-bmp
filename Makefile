@@ -1,7 +1,7 @@
 test.exe:main.o libbmp.o
 	g++ -o test.exe main.o libbmp.o
 
-main.o:main.cpp libbmp.h
+main.o:main.cpp libbmp.h light.h
 	g++ -c main.cpp
 
 libbmp.o:libbmp.cpp libbmp.h vardef.h

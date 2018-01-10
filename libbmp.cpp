@@ -21,7 +21,7 @@ void Bmp::init()
     }
     else
         this->padBytes=0;
-    int bsize=sizeof(BmpFileHeader)+sizeof(BmpInfoHeader)+(height*width)*sizeof(rgbTriple)+padBytes*height;
+    DWORD bsize=sizeof(BmpFileHeader)+sizeof(BmpInfoHeader)+(height*width)*sizeof(rgbTriple)+padBytes*height;
 
 
     this->fileHeader=(BmpFileHeader){0x4d42, bsize, 0, 0, (sizeof(BmpFileHeader)+sizeof(BmpInfoHeader))};
