@@ -2,6 +2,7 @@
 #include "stdio.h"
 #include "math.h"
 #include "light.h"
+#include <ctime>
 
 void sample();
 void geo();
@@ -9,6 +10,8 @@ void geo();
 int main()
 {
     light2d();
+    
+    // sample();
     return 0;
 }
 

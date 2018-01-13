@@ -1,5 +1,6 @@
 #ifndef VARDEF
 #define VARDEF
+// #ifndef _WINDOWS_H
 #pragma pack(push)
 #pragma pack(1)//to avoid memory alignment.
 typedef unsigned char BYTE;
@@ -7,7 +8,8 @@ typedef unsigned short WORD;
 typedef unsigned long DWORD;
 typedef long LONG;
 
-struct tagBITMAPINFOHEADER {
+
+struct mytagBITMAPINFOHEADER {
     DWORD biSize;
     LONG biWidth;
     LONG biHeight;
@@ -21,14 +23,14 @@ struct tagBITMAPINFOHEADER {
     DWORD biClrImportant;
 };
 
-struct tagRGBTRIPLE {
+struct mytagRGBTRIPLE {
     BYTE rgbtBlue;
     BYTE rgbtGreen;
     BYTE rgbtRed;
 };
 
 
-struct tagBITMAPFILEHEADER {
+struct mytagBITMAPFILEHEADER {
     WORD bfType;
     DWORD bfSize;
     WORD bfReserved1;
@@ -36,9 +38,11 @@ struct tagBITMAPFILEHEADER {
     DWORD bfOffBits;
 };
 #pragma pack(pop)
+// #endif
 
-typedef tagBITMAPFILEHEADER BmpFileHeader;
-typedef tagBITMAPINFOHEADER BmpInfoHeader;
-typedef tagRGBTRIPLE rgbTriple;
+typedef mytagBITMAPFILEHEADER BmpFileHeader;
+typedef mytagBITMAPINFOHEADER BmpInfoHeader;
+typedef mytagRGBTRIPLE rgbTriple;
+
 
 #endif

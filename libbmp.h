@@ -24,7 +24,7 @@ class Bmp
 
         
     private:
-        tagRGBTRIPLE **datas;
+        rgbTriple **datas;
         BmpFileHeader fileHeader;
         BmpInfoHeader infoHeader;
         int padBytes;
